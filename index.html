@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko" class="lenis lenis-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shotcut icon" href="/images/favicon.ico" />
+    <title>portfolio site</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- skip -->
+    <ul class="skip">
+      <li><a href="#header">메뉴바로가기</a></li>
+      <li><a href="#main">메인바로가기</a></li>
+      <li><a href="#footer">하단바로가기</a></li>
+    </ul>
+    <!-- //skip -->
+    <div class="wrapper">
+      <!-- header -->
+      <header class="header">
+        <div class="header__inner">
+          <!-- logo -->
+          <h1 class="logo">
+            <a href="/index.html">
+              <img src="./images/logo.png" alt="" />
+            </a>
+          </h1>
+
+          <!-- nav -->
+          <nav class="gnb-wrap">
+            <ul class="gnb">
+              <li>
+                <a href="#about">about</a>
+              </li>
+              <li>
+                <a href="#portfolio">portfolio</a>
+              </li>
+              <li>
+                <a href="#contact">contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <!-- main -->
+      <main class="main__wrap">
+        <!-- banner -->
+        <section class="main__banner">
+          <h2 class="blind">메인배너</h2>
+          <video src="./images/main_video.mp4" autoplay muted loop playsinline class="main_video"></video>
+          <h4 class="typing__text"></h4>
+        </section>
+        <!-- //banner -->
+
+        <!-- about -->
+        <section class="main__about">
+          <h2 class="blind">about me</h2>
+          <div class="main__box">
+            <div class="title__box">
+              <h3 class="sec__title">hello, this is <span>minji</span></h3>
+              <h4 class="sec__desc">Web Designer & FrontEnd Developper</h4>
+            </div>
+
+            <div class="about__box">
+              <!-- ================== Design Card ================== -->
+              <div class="about__design">
+                <div class="about__figure">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    height="100%"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="design-figure"
+                  >
+                    <g clip-path="url(#a)">
+                      <path
+                        fill="#ff7237"
+                        d="M15.2 20.8v-1.075l.76.76a3.2 3.2 0 1 0 4.525-4.525l-.76-.76H20.8a3.2 3.2 0 0 0 0-6.4h-1.075l.76-.76a3.2 3.2 0 1 0-4.525-4.525l-.76.76V3.2a3.2 3.2 0 0 0-6.4 0v1.075l-.76-.76A3.2 3.2 0 1 0 3.515 8.04l.76.76H3.2a3.2 3.2 0 0 0 0 6.4h1.075l-.76.76a3.2 3.2 0 0 0 4.525 4.525l.76-.76V20.8a3.2 3.2 0 0 0 6.4 0"
+                      ></path>
+                    </g>
+                  </svg>
+                  <h5 class="about__text">design</h5>
+                </div>
+                <div class="about__label">
+                  <p>포토샵과 일러스트레이터로</p>
+                  <p>시각적인 요소를 제작하며,</p>
+                  <p>피그마로 UI/UX를 설계하고</p>
+                  <p>사용자 경험을 최적화합니다.</p>
+                  <p>다양한 디자인 작업이 가능합니다.</p>
+                </div>
+              </div>
+
+              <!-- ================== Front‑End Card ================== -->
+              <div class="about__frontend">
+                <div class="about__figure">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    height="100%"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="front-figure"
+                  >
+                    <g clip-path="url(#clip-star)">
+                      <g transform="translate(12,12) scale(3)">
+                        <rect x="-1" y="-4" width="2" height="8" fill="#b13bff" />
+                        <rect x="-1" y="-4" width="2" height="8" fill="#b13bff" transform="rotate(45)" />
+                        <rect x="-1" y="-4" width="2" height="8" fill="#b13bff" transform="rotate(90)" />
+                        <rect x="-1" y="-4" width="2" height="8" fill="#b13bff" transform="rotate(135)" />
+                      </g>
+                    </g>
+                    <defs>
+                      <clipPath id="clip-star">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <h5 class="about__text">frontend</h5>
+                </div>
+                <div class="about__label">
+                  <p>HTML / CSS / JS를 기반으로</p>
+                  <p>컴포넌트 단위 개발이 가능하며,</p>
+                  <p>Vue, React 프레임워크를 활용한</p>
+                  <p>Single Page Application 개발과</p>
+                  <p>인터랙티브 웹 구현이 가능합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //about -->
+        <!-- web portfolio -->
+        <section class="main__portfolio">
+          <h2 class="blind">portfolio</h2>
+          <div class="portfolio__wrap">
+            <!-- 개발 -->
+            <!-- 아웃프런 -->
+            <div class="portfolio__web">
+              <div class="portfolio__info">
+                <h3 class="portfolio__title">outfront 📚</h3>
+                <ul class="portfolio__cat">
+                  <li class="point-web">web</li>
+                  <li>ui/ux</li>
+                  <li>react</li>
+                  <li>spa</li>
+                  <li>피그마</li>
+                  <li>포토샵</li>
+                  <li>반응형</li>
+                  <li>기획</li>
+                  <li>팀프로젝트</li>
+                </ul>
+                <p>온라인 강의 사이트 인프런 사이트를 <span class="development">REACT</span>기반으로 구현하였습니다.</p>
+
+                <ul class="portfolio__view">
+                  <li>
+                    <a href="https://github.com/mimimgg/FED-TEAM-outfront" target="_blank">코드보기</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.figma.com/board/ffA0y2KoGRjKANw7NTknSV/%EC%95%84%EC%9B%83%ED%94%84%EB%9F%B0-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EA%B5%AC%EC%A1%B0%ED%99%94?node-id=211-408&t=5Psy5cqFtX8h71UF-1"
+                      target="_blank"
+                      >사이트 구조화</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://mimimgg.github.io/FED-TEAM-outfront/" target="_blank">구현사이트</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio__thumbnail">
+                <div class="mask"></div>
+                <img src="./images/project01.jpg" alt="리액트기반 아웃프런 사이트" />
+              </div>
+            </div>
+            <!-- // 아웃프런 -->
+            <!-- 템버린즈 -->
+            <div class="portfolio__web">
+              <div class="portfolio__info">
+                <h3 class="portfolio__title">tamburins 💄</h3>
+                <ul class="portfolio__cat">
+                  <li class="point-web">web</li>
+                  <li>ui/ux</li>
+                  <li>Vue.js</li>
+                  <li>JavaScript</li>
+                  <li>피그마</li>
+                  <li>포토샵</li>
+                  <li>반응형</li>
+                  <li>기획</li>
+                  <li>팀프로젝트</li>
+                </ul>
+                <p>
+                  기존 템버린즈 사이트의 개선점을 파악하여 <span class="development">리뉴얼사이트</span>를
+                  제작하였습니다.
+                </p>
+
+                <ul class="portfolio__view">
+                  <li>
+                    <a href="https://github.com/kimeming/FED-TEAM-6401" target="_blank">코드보기</a>
+                  </li>
+                  <li>
+                    <a href="https://kimeming.github.io/FED-TEAM-6401/#/" target="_blank">구현사이트</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio__thumbnail">
+                <div class="mask"></div>
+                <img src="./images/project02.jpg" alt="탬버린즈 리뉴얼 사이트" />
+              </div>
+            </div>
+            <!-- //템버린즈 -->
+            <!-- 두두미엘 -->
+            <div class="portfolio__web">
+              <div class="portfolio__info">
+                <h3 class="portfolio__title">doudoumiel 🧴</h3>
+                <ul class="portfolio__cat">
+                  <li class="point-web">web</li>
+                  <li>cafe24</li>
+                  <li>ui/ux</li>
+                  <li>피그마</li>
+                  <li>포토샵</li>
+                  <li>반응형</li>
+                  <li>기획</li>
+                  <li>기여도 100%</li>
+                </ul>
+                <p>신규 홈페이지 개설 <span class="development">디자인 / 퍼블리싱</span> 기여도 100% 사이트입니다.</p>
+
+                <ul class="portfolio__view">
+                  <li>
+                    <a href="https://lucky-november-ebb.notion.site/13c8ff9d67b78147b1d8ea775b87d205" target="_blank"
+                      >작업사항</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.doudoumiel.co.kr/index.html" target="_blank">구현사이트</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio__thumbnail">
+                <div class="mask"></div>
+                <img src="./images/project03.jpg" alt="두두미엘 사이트" />
+              </div>
+            </div>
+            <!-- //두두미엘 -->
+            <!-- 마이비지니스파트너 -->
+            <div class="portfolio__web">
+              <div class="portfolio__info">
+                <h3 class="portfolio__title">my business partner 🏢</h3>
+                <ul class="portfolio__cat">
+                  <li class="point-web">web</li>
+                  <li>cafe24 builder</li>
+                  <li>ui/ux</li>
+                  <li>피그마</li>
+                  <li>포토샵</li>
+                  <li>반응형</li>
+                  <li>기획</li>
+                  <li>기여도 100%</li>
+                </ul>
+                <p>빌더 기반으로 제작된 기존 홈페이지 부분 <span class="development">리뉴얼</span> 페이지입니다.</p>
+
+                <ul class="portfolio__view">
+                  <li>
+                    <a
+                      href="https://www.figma.com/design/mwmDAqVbz9aBrgAjLHlgL9/%EB%A7%88%EC%9D%B4%EB%B9%84%EC%A7%80%EB%8B%88%EC%8A%A4%ED%8C%8C%ED%8A%B8%EB%84%88_%EB%B9%84%EC%83%81%EC%A3%BC%EC%82%AC%EB%AC%B4%EC%8B%A4?node-id=0-1&t=7icKB3DpHMBolYkV-1"
+                      target="_blank"
+                      >디자인보기</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://lucky-november-ebb.notion.site/1698ff9d67b78039b2f9e32abaaf4f47" target="_blank"
+                      >작업사항</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.mbpmrj.co.kr/default/mbpmullae/companys2.php" target="_blank">구현사이트</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio__thumbnail">
+                <div class="mask"></div>
+                <img src="./images/project04.jpg" alt="마이비지니스파트너 비상주사무실" />
+              </div>
+            </div>
+            <!-- //마이비지니스파트너 -->
+            <!-- // 개발 -->
+            <!-- 디자인 -->
+            <!-- 원콘텐츠 -->
+            <div class="portfolio__web">
+              <div class="portfolio__info">
+                <h3 class="portfolio__title">woncontents 🎬</h3>
+                <ul class="portfolio__cat">
+                  <li class="point-design">design</li>
+                  <li>ui/ux</li>
+                  <li>피그마</li>
+                  <li>포토샵</li>
+                  <li>일러스트레이터</li>
+                  <li>반응형</li>
+                  <li>기획</li>
+                  <li>기여도 100%</li>
+                  <li>드라마제작사</li>
+                </ul>
+                <p>드라마제작사 <span class="design">기획 / UI / UX</span> 피그마 디자인 및 인터렉션 페이지입니다.</p>
+                <ul class="portfolio__view">
+                  <li>
+                    <a
+                      href="https://file.notion.so/f/f/9b099050-b073-4423-a828-c376af363d0f/5693171f-1b2c-446a-80ec-54d94e540e1f/%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%8F%E1%85%A9%E1%86%AB%E1%84%90%E1%85%A6%E1%86%AB%E1%84%8E%E1%85%B3_%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5.pdf?table=block&id=13c8ff9d-67b7-8132-bf8e-c7ed20191bf6&spaceId=9b099050-b073-4423-a828-c376af363d0f&expirationTimestamp=1750708800000&signature=bAkKrUlqcdf92bFyTTWrvU_6VfjTnsBXwcvpJI0GNhI&downloadName=%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%8F%E1%85%A9%E1%86%AB%E1%84%90%E1%85%A6%E1%86%AB%E1%84%8E%E1%85%B3+%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5.pdf"
+                      target="_blank"
+                      >기획</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://lucky-november-ebb.notion.site/13c8ff9d67b78162bbf1ed11db9ba9d9" target="_blank"
+                      >프로젝트개요</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.figma.com/design/SmVh5uRjjX4F2vz2UEoVOc/02_%EC%9B%90%EC%BD%98%ED%85%90%EC%B8%A0-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80?node-id=0-1&t=IZgabr5KgrNzIJdv-1"
+                      target="_blank"
+                      >디자인보기</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio__thumbnail">
+                <div class="mask"></div>
+                <img src="./images/project05.jpg" alt="원콘텐츠 비상주사무실" />
+              </div>
+            </div>
+            <!-- //원콘텐츠 -->
+            <!-- 리미떼두두 -->
+            <div class="portfolio__web">
+              <div class="portfolio__info">
+                <h3 class="portfolio__title">limitedoudou 👶</h3>
+                <ul class="portfolio__cat">
+                  <li class="point-design">design</li>
+                  <li>포토샵</li>
+                  <li>일러스트레이터</li>
+                  <li>기획</li>
+                  <li>제작</li>
+                  <li>아동복쇼핑몰</li>
+                </ul>
+                <p>아동복 쇼핑몰 리미떼두두 <span class="design">디자인</span> 부분작업</p>
+                <ul class="portfolio__view">
+                  <li>
+                    <a href="https://lucky-november-ebb.notion.site/13c8ff9d67b781b9b910f3170a7cd64c" target="_blank"
+                      >작업내역</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio__thumbnail">
+                <div class="mask"></div>
+                <img src="./images/project06.jpg" alt="리미떼두두" />
+              </div>
+            </div>
+            <!-- //리미떼두두 -->
+            <!--두두미엘 -->
+            <div class="portfolio__web">
+              <div class="portfolio__info">
+                <h3 class="portfolio__title">doudoumiel 🧴</h3>
+                <ul class="portfolio__cat">
+                  <li class="point-design">design</li>
+                  <li>ui/ux</li>
+                  <li>피그마</li>
+                  <li>포토샵</li>
+                  <li>일러스트레이터</li>
+                  <li>기획</li>
+                  <li>제작</li>
+                  <li>키즈 코스메틱 브랜드</li>
+                </ul>
+                <p>프리미엄 키즈 코스메틱 브랜드 두두미엘 <span class="design">상품디자인</span> 부분작업</p>
+                <ul class="portfolio__view">
+                  <li>
+                    <a href="https://lucky-november-ebb.notion.site/13c8ff9d67b78152b58bf865e76ef49b" target="_blank"
+                      >작업내역</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://doudoumiel.co.kr/" target="_blank">사이트보기</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="portfolio__thumbnail">
+                <div class="mask"></div>
+                <img src="./images/project07.jpg" alt="리미떼두두" />
+              </div>
+            </div>
+            <!-- //리미떼두두 -->
+          </div>
+          <!-- // 디자인 -->
+          <!-- //web portfolio -->
+
+          <div class="portfolio__etc">
+            
+          </div>
+        </section>
+        <section class="main__contact">
+          <h2 class="blind">contact</h2>
+        </section>
+      </main>
+
+      <!-- //main -->
+
+      <!-- footer -->
+      <!-- //footer -->
+    </div>
+  </body>
+</html>

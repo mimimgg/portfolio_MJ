@@ -1,0 +1,348 @@
+@charset "utf-8";
+
+@import url(./core.css);
+@import url(./reset.css);
+
+.wrapper {
+  min-width: 280px;
+  height: 100%;
+}
+
+/* header */
+.header {
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(5px);
+  z-index: 9;
+}
+.header__inner {
+  height: 100%;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 40px;
+}
+
+.gnb-wrap {
+  color: #fff;
+}
+.gnb {
+  display: flex;
+  gap: calc(8 * 3px);
+}
+.gnb > li {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-family: "Paperlogy-8ExtraBold";
+}
+.gnb > li:hover a {
+  color: #00ff90;
+  transition: all 0.5s;
+}
+/* //header */
+
+/* main */
+.main__wrap {
+  margin-top: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.main__wrap section {
+  width: 100%;
+}
+
+/* banner */
+.main__banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: -1;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+.main_video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.typing__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-family: "Paperlogy-8ExtraBold";
+  white-space: nowrap;
+  font-size: 5vw;
+  border-right: 0.5rem solid #fff;
+  animation: cursor 0.8s ease infinite;
+}
+/* //banner */
+
+/* about */
+/* about: info */
+.main__about {
+  box-sizing: border-box;
+}
+.main__box {
+  padding: 8rem 4rem;
+  background-color: #000;
+}
+.title__box {
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.sec__title {
+  text-transform: uppercase;
+  font-size: 6vw;
+  white-space: nowrap;
+  font-family: "Paperlogy-8ExtraBold";
+  font-weight: 800;
+}
+.sec__title span {
+  color: #00ff90;
+}
+.sec__desc {
+  font-size: 2vw;
+  font-family: "Montserrat";
+  font-weight: 200;
+  letter-spacing: 0.8rem;
+}
+/* //about: title */
+
+.about__box {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  padding: 4vh;
+}
+.about__box > div {
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.about__design,
+.about__frontend {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.about__figure {
+  position: relative;
+}
+.about__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6vw;
+  text-transform: uppercase;
+  font-family: "Paperlogy-8ExtraBold";
+}
+.about__label {
+  position: absolute;
+  font-size: 1.4vw;
+  text-transform: uppercase;
+  font-family: "Paperlogy-8ExtraBold";
+  line-height: 1.6;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(83 80 80 / 60%);
+  border-radius: 26px;
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 11px 68px 0px rgb(103 103 103 / 65%), inset 0px -8px 16px 0px rgb(97 97 97 / 60%),
+    inset 0px 11px 28px 0px rgb(79 86 80);
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+.about__frontend:hover .about__text,
+.about__design:hover .about__text {
+  opacity: 1;
+}
+
+.design-figure,
+.front-figure {
+  transition: transform 20s ease-in-out;
+  filter: grayscale(0);
+}
+
+.about__design:hover .design-figure {
+  transform: rotate(360deg);
+  filter: grayscale(0.3);
+}
+.about__frontend:hover .front-figure {
+  transform: rotate(-360deg);
+  filter: grayscale(0.3);
+}
+.about__design:hover .about__label {
+  opacity: 1;
+  visibility: visible;
+}
+.about__frontend:hover .about__label {
+  opacity: 1;
+  visibility: visible;
+}
+/* //about: info */
+
+/* web portfolio */
+.main__portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio__wrap {
+  position: relative;
+}
+.portfolio__web {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.portfolio__info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.portfolio__info .portfolio__title {
+  padding-bottom: 1rem;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-family: "Paperlogy-8ExtraBold";
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+.portfolio__info .portfolio__cat {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "GmarketSansMedium";
+  padding-bottom: 4rem;
+}
+.portfolio__info .portfolio__cat li {
+  border: 1px solid #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 1.6rem;
+  color: #fff;
+  border-color: #fff;
+}
+.portfolio__info .portfolio__cat .point-web {
+  border: none;
+  background: #00ff90;
+  padding: 0.8rem 1rem;
+  border-radius: 1.6rem;
+  color: #000;
+  font-weight: bold;
+}
+.portfolio__info .portfolio__cat .point-design {
+  border: none;
+  background: #FF5580;
+  padding: 0.8rem 1rem;
+  border-radius: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.portfolio__info p {
+  font-size: 1.6rem;
+  font-family: "GmarketSansMedium";
+}
+.portfolio__info .development {
+  color: #00ff90;
+}
+.portfolio__info .design {
+  color: #FF5580;
+}
+
+
+.portfolio__view {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.6rem;
+  font-family: "GmarketSansMedium";
+  padding-top: 4rem;
+}
+.portfolio__view li {
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: .3s ease-out;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+.portfolio__view li:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.portfolio__thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.portfolio__thumbnail .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.portfolio__thumbnail img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* //about */
+
+/* //main */
