@@ -1,3 +1,29 @@
+document.querySelector('.logo').parentElement.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+document.querySelectorAll('.gnb a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+
 // ============================
 // [1] 변수 선언 및 기본 설정
 // ============================
@@ -81,8 +107,8 @@ document.querySelectorAll(".portfolio__web").forEach((card) => {
     },
   });
 
-  tl.from(title, { opacity: 0, y: 50, duration: 0.8 });
-  tl.from(categories, { opacity: 0, y: 20, stagger: 0.1, duration: 0.6 });
+  tl.from(title, { opacity: 0, y: 50, duration: 0.4 });
+  tl.from(categories, { opacity: 0, y: 20, stagger: 0.1, duration: 0.5 });
   tl.from(desc, { opacity: 0, y: 30, duration: 0.6 });
   tl.from(buttons, { opacity: 0, y: 40, stagger: 0.2, duration: 0.6 });
 });
@@ -171,3 +197,4 @@ function animateMarquee() {
   requestAnimationFrame(animateMarquee);
 }
 animateMarquee();
+

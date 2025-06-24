@@ -518,7 +518,7 @@
   width: 100%;
   background-color: #000; /* 어두운 배경색 */
   color: #fff; /* 텍스트 색상 */
-  
+
   box-sizing: border-box;
   text-align: center;
   z-index: 3;
@@ -582,7 +582,6 @@
   font-family: "GmarketSansMedium";
 }
 
-
 .footer__copyright {
   font-size: 1.2rem;
   font-family: "Montserrat";
@@ -615,8 +614,59 @@
   top: 20%;
 }
 
-
-
 /* //footer */
 
+@media (max-width: 480px) {
+  .header__inner {
+    padding: 0 2rem;
+  }
 
+  .gnb {
+    gap: 1.6rem;
+  }
+
+  .sec__desc {
+    white-space: normal;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .about__box {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about__design,
+  .about__frontend {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__label {
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .portfolio__thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .portfolio__info .portfolio__title {
+    font-size: 5vw;
+  }
+
+  .portfolio__info .portfolio__cat {
+    font-size: 1rem;
+  }
+}
