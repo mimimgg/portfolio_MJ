@@ -62,3 +62,55 @@ async function startTypingLoop() {
 startTypingLoop();
 
 
+// GSAP 등록
+gsap.registerPlugin(ScrollTrigger);
+
+// 모든 portfolio 카드에 대해 반복
+document.querySelectorAll(".portfolio__web").forEach((card) => {
+  const title = card.querySelector(".portfolio__title");
+  const categories = card.querySelectorAll(".portfolio__cat li");
+  const desc = card.querySelector("p");
+  const buttons = card.querySelectorAll(".portfolio__view");
+
+  // timeline 설정
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: card,
+      start: "top center",
+      toggleActions: "play none none none",
+    },
+  });
+
+  // 타이틀 등장
+  tl.from(title, {
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+  });
+
+  // 카테고리 하나씩 등장
+  tl.from(categories, {
+    opacity: 0,
+    y: 20,
+    stagger: 0.1,
+    duration: 0.6,
+  });
+
+  // 설명 등장
+  tl.from(desc, {
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+  });
+
+  // 버튼 등장 (제일 마지막)
+  tl.from(buttons, {
+    opacity: 0,
+    y: 40,
+    stagger: 0.2,
+    duration: 0.6,
+  });
+
+});
+
+
