@@ -29,7 +29,7 @@
 ## 📞 Contact
 
 - **📄 Resume:** [https://lucky-november-ebb.notion.site/13c8ff9d67b7816e9072fdc6094ba00a]
-- **🌐 Portfolio:** [your-blog-or-personal-website-link](https://lucky-november-ebb.notion.site/LEE-MINJI-13c8ff9d67b7800fbf68f92e545cfc98)
+- **🌐 Portfolio:** [https://lucky-november-ebb.notion.site/LEE-MINJI-13c8ff9d67b7800fbf68f92e545cfc98]
 - **📧 Email:** [com42123@naver.com]
 
 감사합니다🙇‍♀️
