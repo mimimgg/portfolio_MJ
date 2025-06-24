@@ -9,6 +9,13 @@ figure, figcaption {
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
 /* HTML 기본 설정 */
 html {
     font-size: 62.5%; /* 1rem = 10px로 설정하여 rem 단위 사용을 용이하게 함 */

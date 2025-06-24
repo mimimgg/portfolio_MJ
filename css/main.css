@@ -5,7 +5,9 @@
 
 .wrapper {
   min-width: 280px;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* header */
@@ -255,7 +257,7 @@
   text-transform: uppercase;
   font-family: "Paperlogy-8ExtraBold";
   font-weight: bold;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 .portfolio__info .portfolio__cat {
   display: flex;
@@ -282,7 +284,7 @@
 }
 .portfolio__info .portfolio__cat .point-design {
   border: none;
-  background: #FF5580;
+  background: #ff5580;
   padding: 0.8rem 1rem;
   border-radius: 1.6rem;
   color: #fff;
@@ -297,9 +299,8 @@
   color: #00ff90;
 }
 .portfolio__info .design {
-  color: #FF5580;
+  color: #ff5580;
 }
-
 
 .portfolio__view {
   display: flex;
@@ -308,7 +309,6 @@
   font-family: "GmarketSansMedium";
   padding-top: 4rem;
   overflow: visible;
-
 }
 .portfolio__view li {
   background: rgba(255, 255, 255, 0.2);
@@ -316,7 +316,7 @@
   padding: 0.8rem 2rem;
   border-radius: 1rem;
   text-align: center;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
@@ -342,17 +342,281 @@
   width: 100%;
   object-fit: cover;
 }
-
 /* //about */
 
-/* sub portfolio */
+/* 기타 */
+/* 기타작업물 섹션 */
+.portfolio__etc {
+  position: relative;
+  height: 300vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 10rem 4rem;
+  box-sizing: border-box;
+}
 
+.portfolio__etc h2 {
+  font-size: 5rem;
+  font-family: "Paperlogy-8ExtraBold";
+  color: #fff;
+  padding-bottom: 4rem;
+}
 
-/* //sub portfolio */
+/* GSAP pin 될 실제 래퍼 */
+.etc__project__wrap {
+  position: sticky; /* GSAP이 pin을 관리하므로, 여기에 sticky는 임시 속성일 수 있음 */
+  top: 0;
+  width: 100vw; /* 뷰포트 너비만큼 차지 */
+  height: 80vh; /* 가로 스크롤 컨테이너의 높이 */
+  display: flex;
+  flex-wrap: nowrap; /* 아이템들이 줄바꿈되지 않도록 */
+  align-items: center; /* 아이템들을 세로 중앙 정렬 */
+  padding: 0 5vw; /* 좌우 패딩 */
+  box-sizing: border-box;
+  gap: 3vw; /* 아이템 간의 간격 (vw 단위로 반응형) */
+  cursor: grab; /* 마우스 포인터 초기 모양 */
+}
+
+.etc__content {
+  flex-shrink: 0; /* 아이템이 줄어들지 않도록 */
+  width: 40vw; /* 각 아이템의 너비 (조절 가능, 뷰포트 너비의 40%) */
+  height: 60vh; /* 각 아이템의 높이 (조절 가능) */
+  background-color: #444;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 이미지 넘침 방지 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 호버 애니메이션 */
+  cursor: pointer; /* 클릭 가능함을 나타냄 */
+}
+
+.etc__content img {
+  width: 100%;
+  height: 70%; /* 이미지 영역 비율 */
+  object-fit: cover; /* 이미지가 잘리지 않고 꽉 차게 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.etc__content .item-description {
+  width: 100%;
+  height: 30%; /* 설명 영역 비율 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  font-family: "GmarketSansMedium";
+  color: #ddd;
+}
+
+/* 마우스 호버 시 포인터 변형 (JS로 적용될 클래스) */
+.etc__project__wrap.custom-cursor-active .etc__content {
+  cursor: url("../images/custom-cursor.png") 16 16, pointer; /* 사용자 지정 이미지, 핫스팟 X Y, 대체 커서 */
+  /* 실제 커서 이미지와 경로, 핫스팟 (커서의 정확한 클릭 지점)에 따라 조절 */
+  /* 커서 이미지는 작은 PNG (32x32 또는 64x64)가 좋습니다. */
+  cursor: none; /* 실제 커서를 숨기고 커스텀 커서만 보이게 할 수도 있습니다. */
+}
+
+.etc__content:hover {
+  transform: translateY(-10px); /* 살짝 위로 뜨는 효과 */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* 팝업 스타일 */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 다른 콘텐츠 위에 표시 */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px; /* 팝업 최대 너비 */
+  max-height: 90vh; /* 팝업 최대 높이 */
+  overflow-y: auto; /* 내용이 길면 스크롤 */
+  text-align: center;
+  transform: translateY(20px); /* 초기 위치 */
+  opacity: 0; /* 초기 투명도 */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.popup-content h3 {
+  font-size: 2.5rem;
+  font-family: "Paperlogy-8ExtraBold";
+  color: #00ff90;
+  margin-bottom: 20px;
+}
+
+.popup-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.popup-content p {
+  font-size: 1.1rem;
+  font-family: "GmarketSansMedium";
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.popup-close {
+  padding: 10px 25px;
+  background-color: #00ff90;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Paperlogy-8ExtraBold";
+  transition: background-color 0.3s ease;
+}
+
+.popup-close:hover {
+  background-color: #fff;
+}
+/* //기타 */
 
 /* //main */
 
+/* footer */
+
+.footer {
+  width: 100%;
+  background-color: #000; /* 어두운 배경색 */
+  color: #fff; /* 텍스트 색상 */
+  
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 3;
+}
+
+.footer__wrap {
+  display: flex;
+  padding: 5rem 4rem; /* 상하좌우 패딩 */
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* 요소들 간의 간격 */
+  max-width: 1200px; /* 푸터 콘텐츠의 최대 너비 제한 (선택 사항) */
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+.footer__title {
+  font-size: 3.5rem;
+  font-family: "Paperlogy-8ExtraBold";
+  color: #00ff90; /* 강조 색상 */
+  margin-bottom: 1rem;
+}
+
+.footer__description {
+  font-size: 1.6rem;
+  font-family: "GmarketSansMedium";
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+  justify-content: center;
+  gap: 3rem; /* 링크 아이템 간의 간격 */
+  margin-bottom: 3rem;
+}
+.footer__link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.footer__link-item:hover {
+  background-color: #00ff90;
+  color: #000;
+  transform: translateY(-3px);
+}
+.footer__link-item i {
+  font-size: 1.4rem;
+}
+.footer__link-item span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "GmarketSansMedium";
+}
 
 
-/* main.css 에 추가 */
+.footer__copyright {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.marquee__wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+  font-family: "Montserrat";
+  letter-spacing: 2px;
+  position: relative;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.marquee__track {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  position: absolute;
+  left: 0;
+  top: 20%;
+}
+
+
+
+/* //footer */
+
 
