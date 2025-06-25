@@ -113,76 +113,9 @@ document.querySelectorAll(".portfolio__web").forEach((card) => {
   tl.from(buttons, { opacity: 0, y: 40, stagger: 0.2, duration: 0.6 });
 });
 
-// ============================
-// [4] 기타 작업물 - 가로 스크롤, 팝업, 커서
-// ============================
-if (otherWorksSection && otherWorksWrap && otherWorkItems.length > 0) {
-  const totalDistance = otherWorksWrap.scrollWidth - window.innerWidth;
-
-  gsap.to(otherWorksWrap, {
-    x: -totalDistance,
-    ease: "none",
-    scrollTrigger: {
-      trigger: otherWorksSection,
-      pin: true,
-      scrub: 1,
-      start: "top top",
-      end: () => `+=${totalDistance + window.innerHeight * 0.5}`,
-      snap: {
-        snapTo: 1,
-        duration: { min: 0.2, max: 0.8 },
-        delay: 0.2,
-        ease: "power1.inOut",
-      },
-    },
-  });
-
-  // 팝업 열기
-  otherWorkItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const targetId = item.dataset.popupTarget;
-      const targetPopup = document.getElementById(targetId);
-      if (targetPopup) {
-        targetPopup.classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
-    });
-  });
-
-  // 팝업 닫기 버튼
-  document.querySelectorAll(".popup-close").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const popupOverlay = e.target.closest(".popup-overlay");
-      if (popupOverlay) {
-        popupOverlay.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-    });
-  });
-
-  // 팝업 외부 클릭 시 닫기
-  document.querySelectorAll(".popup-overlay").forEach((overlay) => {
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) {
-        overlay.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-    });
-  });
-
-  // 마우스 진입 시 커서 교체
-  otherWorksWrap.addEventListener("mouseenter", () => {
-    otherWorksWrap.classList.add("custom-cursor-active");
-  });
-  otherWorksWrap.addEventListener("mouseleave", () => {
-    otherWorksWrap.classList.remove("custom-cursor-active");
-  });
-} else {
-  console.warn("기타 작업물 섹션 요소가 존재하지 않음. 스크립트 실행 생략.");
-}
 
 // ============================
-// [5] 하단 마퀴 애니메이션
+// [4] 하단 마퀴 애니메이션
 // ============================
 let repeated = marqueeText.repeat(20);
 marqueeTrack.innerText = repeated;
