@@ -131,3 +131,12 @@ function animateMarquee() {
 }
 animateMarquee();
 
+
+// ============================
+// [5] 모바일 active 토글 기능
+// ============================
+document.querySelectorAll('.about__design').forEach(item => {
+  item.addEventListener('click', function () {
+    this.classList.toggle('active');
+  });
+});
