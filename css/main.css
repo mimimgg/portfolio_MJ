@@ -250,6 +250,7 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
+  padding-inline: 2rem;
 }
 .portfolio__info .portfolio__title {
   padding-bottom: 1rem;
