@@ -27,6 +27,7 @@
 
 ## 📞 Contact
 
+- **🖥️ Website:** [https://mimimgg.github.io/portfolio_MJ/]
 - **📄 Resume:** [https://buly.kr/ESyctnB]
 - **📧 Email:** [com42123@naver.com]
 
