@@ -5,8 +5,7 @@
 
 ## 🌟 About Me
 
-저는 직관적인 UI/UX 디자인을 가능하게 하고 효율적인 프론트엔드 개발에 강점이 있습니다.
-새로운 기술을 학습하고 실제 프로젝트에 적용하는 것을 즐깁니다.
+저는 새로운 기술을 학습하고 실제 프로젝트에 적용하는 것을 즐깁니다.
 
 ## 🛠️ Tech Stack
 
@@ -28,8 +27,7 @@
 
 ## 📞 Contact
 
-- **📄 Resume:** [https://lucky-november-ebb.notion.site/13c8ff9d67b7816e9072fdc6094ba00a]
-- **🌐 Portfolio:** [https://lucky-november-ebb.notion.site/LEE-MINJI-13c8ff9d67b7800fbf68f92e545cfc98]
+- **📄 Resume:** [https://buly.kr/ESyctnB]
 - **📧 Email:** [com42123@naver.com]
 
 감사합니다🙇‍♀️
