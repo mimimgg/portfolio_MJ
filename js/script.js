@@ -111,6 +111,7 @@ document.querySelectorAll(".portfolio__web").forEach((card) => {
   tl.from(categories, { opacity: 0, y: 20, stagger: 0.1, duration: 0.5 });
   tl.from(desc, { opacity: 0, y: 30, duration: 0.6 });
   tl.from(buttons, { opacity: 0, y: 40, stagger: 0.2, duration: 0.6 });
+  
 });
 
 
