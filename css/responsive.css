@@ -167,6 +167,11 @@
     width: 100%;
   }
 
+  .portfolio__view a {
+    display: inline-block;
+    width: 100%;
+  }
+
   /* Footer */
   .footer__wrap {
     padding: 3rem 2rem;
