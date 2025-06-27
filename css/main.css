@@ -3,6 +3,33 @@
 @import url(./core.css);
 @import url(./reset.css);
 
+/* fonts */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('../fonts/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url('../fonts/NanumSquareNeoTTF-bRg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('../fonts/Paperlogy-8ExtraBold.woff2') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
 .wrapper {
   min-width: 280px;
   min-height: 100vh;
