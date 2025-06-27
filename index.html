@@ -31,7 +31,7 @@
   <body>
     <!-- 스킵 내비게이션 -->
     <ul class="skip">
-      <li><a href="#header">메뉴바로가기</a></li>
+      <li><a href="#nav">메뉴바로가기</a></li>
       <li><a href="#main">메인바로가기</a></li>
       <li><a href="#footer">하단바로가기</a></li>
     </ul>
@@ -44,7 +44,7 @@
         <div class="header__inner">
           <a href="#"><img src="./images/logo.png" alt="로고" class="logo" /></a>
           <nav class="gnb-wrap">
-            <ul class="gnb">
+            <ul class="gnb" id="nav">
               <li><a href="#main__about">about</a></li>
               <li><a href="#main__portfolio">portfolio</a></li>
               <li><a href="#footer">contact</a></li>
@@ -55,11 +55,11 @@
       <!-- //HEADER -->
 
       <!-- MAIN -->
-      <main class="main__wrap">
+      <main class="main__wrap" id="main">
         <!-- 배너 -->
         <section class="main__banner">
           <h2 class="blind">메인배너</h2>
-          <video src="./images/main_video.mp4" autoplay muted loop playsinline class="main_video"></video>
+          <video src="./images/main_video.mp4" autoplay muted loop playsinline class="main_video" preload="none"></video>
           <h4 class="typing__text"></h4>
         </section>
         <!-- //배너 -->
