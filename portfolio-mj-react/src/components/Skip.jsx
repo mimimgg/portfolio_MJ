@@ -3,7 +3,7 @@ import React from "react";
 function Skip() {
   return (
     <div>
-      <ul class="skip">
+      <ul className="skip">
         <li>
           <a href="#nav">메뉴바로가기</a>
         </li>

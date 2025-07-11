@@ -1,0 +1,24 @@
+.skip {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0;
+
+  li {
+    a {
+      display: block;
+      line-height: 0;
+      font-size: 0;
+      text-align: center;
+      color: #fff;
+      background-color: #000;
+
+      &:focus {
+        line-height: 50px;
+        font-size: 16px;
+      }
+    }
+  }
+}
