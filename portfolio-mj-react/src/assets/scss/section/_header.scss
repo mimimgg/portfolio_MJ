@@ -1,0 +1,45 @@
+// _header.scss
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(5px);
+  z-index: 9;
+}
+
+.header__inner {
+  height: 100%;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 40px;
+  }
+
+  .gnb-wrap {
+    color: #fff;
+
+    .gnb {
+      display: flex;
+      gap: calc(8 * 3px);
+
+      li {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-family: "Paperlogy-8ExtraBold";
+
+        // &는 li를 의미합니다. li에 hover했을 때, 그 안에 있는 a에 스타일을 적용합니다.
+        &:hover a {
+          color: #00ff90;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
