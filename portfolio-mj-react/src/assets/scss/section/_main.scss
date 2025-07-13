@@ -1,0 +1,38 @@
+// _main.scss
+
+.main__wrap {
+  margin-top: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.main__wrap section {
+  width: 100%;
+}
+
+.main__about {
+  box-sizing: border-box;
+}
+.main__box {
+  padding: 10rem 4rem;
+  background-color: $black-color;
+}
+.title__box {
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.sec__title {
+  text-transform: uppercase;
+  font-size: 6vw;
+  white-space: nowrap;
+  font-family: $font-paperlogy;
+  font-weight: 800;
+}
+.sec__title span {
+  color: $primary-color;
+}
+.sec__desc {
+  font-size: 2vw;
+  font-family: $font-montserrat;
+  font-weight: 200;
+  letter-spacing: 0.8rem;
+}
