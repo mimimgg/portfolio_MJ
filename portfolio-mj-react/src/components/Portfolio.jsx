@@ -1,10 +1,12 @@
+// Portfolio.jsx
+
 import React from 'react';
 
-function Portfolio() {
+function Portfolio({ children }) {
   return (
-    <div>
-      portfolio
-    </div>
+    <section id="portpolio" role="region">
+        {children}
+    </section>
   );
 }
 
