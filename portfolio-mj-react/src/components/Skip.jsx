@@ -1,3 +1,5 @@
+// Skip.jsx
+
 import React from "react";
 
 function Skip() {

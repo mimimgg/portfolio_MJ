@@ -32,11 +32,11 @@
       li {
         text-transform: uppercase;
         font-size: 1.6rem;
-        font-family: "Paperlogy-8ExtraBold";
+        font-family: $font-paperlogy;
 
         // &는 li를 의미합니다. li에 hover했을 때, 그 안에 있는 a에 스타일을 적용합니다.
         &:hover a {
-          color: #00ff90;
+          color: $primary-color;
           transition: all 0.5s;
         }
       }
