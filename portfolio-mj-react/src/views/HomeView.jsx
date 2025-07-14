@@ -1,6 +1,6 @@
 import Skip from "../components/Skip";
 import Header from "../components/Header";
-import Portfolio from "../components/Portfolio";
+import Portfolio from "../components/Portfolio/Portfolio";
 import Footer from "../components/Footer";
 // import Main from "../components/Main";
 import Banner from "../components/Banner";
