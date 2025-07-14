@@ -1,0 +1,117 @@
+.main__about {
+  padding: 10rem 0;
+  background: #000;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+
+  &.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .main__box {
+    padding: 10rem 4rem;
+    background: #000;
+    color: #fff;
+
+    .title__box {
+      text-align: center;
+      padding-bottom: 4rem;
+
+      .sec__title {
+        font-family: "Paperlogy-8ExtraBold";
+        font-size: 6vw;
+        text-transform: uppercase;
+
+        span {
+          color: #00ff90;
+        }
+      }
+
+      .sec__desc {
+        font-family: "Montserrat";
+        font-size: 2vw;
+        font-weight: 200;
+        letter-spacing: 0.8rem;
+      }
+    }
+
+    .about__box {
+      display: flex;
+      justify-content: center;
+      gap: 10vw;
+      padding: 4vh;
+
+      .about__design,
+      .about__frontend {
+        width: 25vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .about__figure {
+          position: relative;
+          svg {
+            transition: transform 20s ease-in-out, filter 0.3s ease;
+          }
+        }
+
+        .about__text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: "Paperlogy-8ExtraBold";
+          font-size: 1.6vw;
+          text-transform: uppercase;
+        }
+
+        .about__label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          opacity: 0;
+          visibility: hidden;
+          background: rgba(83, 80, 80, 0.6);
+          backdrop-filter: blur(10px);
+          border-radius: 26px;
+          box-shadow: 10px 11px 68px rgba(103,103,103,0.65), inset 0 -8px 16px rgba(97,97,97,0.6);
+          transition: opacity 0.4s, visibility 0.4s;
+
+          p {
+            font-family: "Paperlogy-8ExtraBold";
+            font-size: 1.4vw;
+            line-height: 1.6;
+            margin: 0.2rem 0;
+          }
+        }
+
+        &:hover {
+          .about__label {
+            opacity: 1;
+            visibility: visible;
+          }
+          svg {
+            filter: grayscale(0.3);
+          }
+        }
+
+        &.about__design:hover svg {
+          transform: rotate(360deg);
+        }
+        &.about__frontend:hover svg {
+          transform: rotate(-360deg);
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-// src/components/Banner.jsx
+// Banner.jsx
 
 import React, { useState, useEffect } from "react";
 
@@ -31,25 +31,22 @@ function Banner() {
             setText(prev => prev + toType[index].charAt(prev.length));
           }, TYPING_SPEED);
         } else {
-          // 문장 완료 후
           timeoutId = setTimeout(() => {
             if (index === toType.length - 1) {
-              setIsTyping(false); // 마지막 문장이면 지우기 단계로 전환
-              setText(toType[index]); // 상태를 전체 텍스트로 초기화
+              setIsTyping(false); 
+              setText(toType[index]);
             } else {
-              setIndex(prev => prev + 1); // 다음 문장으로 이동
-              setText(""); // 텍스트 초기화
+              setIndex(prev => prev + 1);
+              setText("");
             }
           }, PAUSE_AFTER_PHRASE);
         }
       } else {
-        // 지우기 단계
         if (text.length > 0) {
           timeoutId = setTimeout(() => {
             setText(prev => prev.slice(0, -1));
           }, DELETING_SPEED);
         } else {
-          // 모두 지우면 처음으로 돌아가기
           timeoutId = setTimeout(() => {
             setIsTyping(true);
             setIndex(0);
@@ -58,10 +55,8 @@ function Banner() {
       }
     };
     
-    // 컴포넌트가 마운트될 때 애니메이션 시작
     animate();
 
-    // 컴포넌트 언마운트 시 타이머 정리
     return () => clearTimeout(timeoutId);
 
   }, [isTyping, index, text]);
