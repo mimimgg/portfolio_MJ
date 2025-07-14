@@ -1,0 +1,105 @@
+// Footer.scss
+
+.footer {
+  width: 100%;
+  background-color: $black-color;
+  color: $white-color;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 3;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 4rem;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-family: $font-paperlogy;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    font-family: $font-gmarket;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background-color: rgba($white-color, 0.05);
+    border: 1px solid rgba($white-color, 0.2);
+    border-radius: 1.2rem;
+    color: $white-color;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    i {
+      font-size: 1.4vw;
+    }
+
+    span {
+      font-size: 1.4vw;
+      font-weight: 600;
+      font-family: $font-gmarket;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      color: $black-color;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+    font-family: $font-montserrat;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+  }
+}
+
+.marquee__wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: $black-color;
+  color: $white-color;
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+  font-family: $font-montserrat;
+  letter-spacing: 2px;
+  position: relative;
+  border-top: 1px solid $white-color;
+  border-bottom: 1px solid $white-color;
+}
+
+.marquee__track {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  position: absolute;
+  left: 0;
+  top: 20%;
+}
