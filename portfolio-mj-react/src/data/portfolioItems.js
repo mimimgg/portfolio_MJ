@@ -1,6 +1,6 @@
 // portfolioData.js
 
-export const portfolioItems = [
+const portfolioItems = [
   {
     id: 1,
     title: 'outfront 📚',
@@ -83,3 +83,5 @@ export const portfolioItems = [
     thumbnail: './images/project07.webp',
   },
 ];
+
+export default portfolioItems;

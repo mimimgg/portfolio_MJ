@@ -1,0 +1,131 @@
+// portfolio.scss
+
+.main__portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .portfolio__wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .portfolio__web {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    .portfolio__info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      padding-inline: 2rem;
+
+      .portfolio__title {
+        padding-bottom: 1rem;
+        font-size: 6vw;
+        text-transform: uppercase;
+        font-family: $font-paperlogy;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+      }
+
+      .portfolio__cat {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-family: $font-gmarket;
+        padding-bottom: 4rem;
+
+        li {
+          border: 1px solid $white-color;
+          padding: 0.8rem 1rem;
+          border-radius: 1.6rem;
+          color: $white-color;
+
+          &.point-web {
+            background: $primary-color;
+            border: none;
+            color: $black-color;
+            font-weight: bold;
+          }
+
+          &.point-design {
+            background: #ff5580;
+            border: none;
+            color: $white-color;
+            font-weight: bold;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-family: $font-gmarket;
+      }
+
+      .development {
+        color: $primary-color;
+      }
+
+      .design {
+        color: #ff5580;
+      }
+
+      .portfolio__view {
+        display: flex;
+        gap: 2rem;
+        font-size: 1.6rem;
+        font-family: $font-gmarket;
+        padding-top: 4rem;
+
+        li a {
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(5px);
+          padding: 0.8rem 2rem;
+          border-radius: 1rem;
+          text-align: center;
+          transition: 0.3s ease-out;
+          cursor: pointer;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+
+          &:hover {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid $white-color;
+          }
+        }
+      }
+    }
+
+    .portfolio__thumbnail {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+
+      .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+}

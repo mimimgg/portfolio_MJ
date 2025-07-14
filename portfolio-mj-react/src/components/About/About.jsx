@@ -1,17 +1,16 @@
 // About.jsx
 
-import React, { useEffect, useRef } from 'react';
-import { aboutCards } from '../../data/aboutData';
+import React, { useEffect, useRef } from "react";
+import { aboutCards } from "../../data/aboutData";
 
 export default function About() {
   const ref = useRef(null);
 
   useEffect(() => {
     const section = ref.current;
-    const obs = new IntersectionObserver(
-      ([e]) => e.isIntersecting && section.classList.add('is-visible'),
-      { threshold: 0.3 }
-    );
+    const obs = new IntersectionObserver(([e]) => e.isIntersecting && section.classList.add("is-visible"), {
+      threshold: 0.3,
+    });
     if (section) obs.observe(section);
     return () => obs.disconnect();
   }, []);
@@ -46,5 +45,3 @@ export default function About() {
     </section>
   );
 }
-
-
