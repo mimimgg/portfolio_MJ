@@ -1,4 +1,4 @@
-// Footer.scss
+// footer.scss
 
 .footer {
   width: 100%;
@@ -6,7 +6,8 @@
   color: $white-color;
   box-sizing: border-box;
   text-align: center;
-  z-index: 3;
+  position: relative;
+  z-index: 1;
 
   &__wrap {
     display: flex;
@@ -16,6 +17,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 5rem 4rem;
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
@@ -93,13 +96,14 @@
   position: relative;
   border-top: 1px solid $white-color;
   border-bottom: 1px solid $white-color;
+  z-index: 3; 
 }
 
 .marquee__track {
   display: inline-block;
   white-space: nowrap;
   will-change: transform;
-  position: absolute;
-  left: 0;
-  top: 20%;
+  position: relative;
+  left: auto; 
+  top: auto;  
 }
