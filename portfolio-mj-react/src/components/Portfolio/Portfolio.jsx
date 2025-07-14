@@ -21,17 +21,16 @@ function Portfolio() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card,
-          start: 'top 70%', // 트리거 지점 (화면 아래쪽에서 시작)
-          toggleActions: 'play none none none', // ✅ 한 번만 실행
-          // ❌ scrub 제거됨
-          // markers: true, // 디버깅 원하면 주석 해제
+          start: 'top 80%', // ✅ 너무 늦지 않게 트리거
+          once: true, // ✅ 한 번만 실행되게 해서 "걸리는" 문제 방지
         },
       });
   
-      tl.from(title, { opacity: 0, y: 50, duration: 0.4 });
-      tl.from(categories, { opacity: 0, y: 20, stagger: 0.1, duration: 0.5 });
-      tl.from(desc, { opacity: 0, y: 30, duration: 0.5 });
-      tl.from(buttons, { opacity: 0, y: 40, stagger: 0.2, duration: 0.6 });
+      // ✅ fromTo로 확실하게 초기 상태 지정
+      tl.fromTo(title, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4 });
+      tl.fromTo(categories, { opacity: 0, y: 20 }, { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 });
+      tl.fromTo(desc, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5 });
+      tl.fromTo(buttons, { opacity: 0, y: 40 }, { opacity: 1, y: 0, stagger: 0.2, duration: 0.6 });
     });
   
     ScrollTrigger.refresh();
