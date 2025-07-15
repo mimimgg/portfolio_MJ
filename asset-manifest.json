@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio_MJ/portfolio-mj-react/static/css/main.e5c431fb.css",
+    "main.js": "/portfolio_MJ/portfolio-mj-react/static/js/main.a7c711f5.js",
+    "static/media/NanumSquareNeoTTF-bRg.woff": "/portfolio_MJ/portfolio-mj-react/static/media/NanumSquareNeoTTF-bRg.3ef1b154df4dd187269a.woff",
+    "static/media/GmarketSansMedium.woff": "/portfolio_MJ/portfolio-mj-react/static/media/GmarketSansMedium.e8fdaca6e7179311bb93.woff",
+    "static/media/Montserrat-Light.ttf": "/portfolio_MJ/portfolio-mj-react/static/media/Montserrat-Light.afe0a608093579a47b06.ttf",
+    "static/media/Paperlogy-8ExtraBold.woff2": "/portfolio_MJ/portfolio-mj-react/static/media/Paperlogy-8ExtraBold.d21378fc62913fff3b64.woff2",
+    "index.html": "/portfolio_MJ/portfolio-mj-react/index.html",
+    "main.e5c431fb.css.map": "/portfolio_MJ/portfolio-mj-react/static/css/main.e5c431fb.css.map",
+    "main.a7c711f5.js.map": "/portfolio_MJ/portfolio-mj-react/static/js/main.a7c711f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5c431fb.css",
+    "static/js/main.a7c711f5.js"
+  ]
+}
