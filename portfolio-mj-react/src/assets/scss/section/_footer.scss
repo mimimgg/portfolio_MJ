@@ -81,6 +81,52 @@
     letter-spacing: 1px;
     color: #888;
   }
+
+  // ✅ 480px 이하
+  @media (max-width: 480px) {
+    &__wrap {
+      padding: 3rem 2rem;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__description {
+      font-size: 1.4rem;
+    }
+
+    &__links {
+      width: 80%;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &__link-item {
+      padding: 2rem 2rem;
+      justify-content: space-between;
+
+      i {
+        font-size: 1.8rem;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  // ✅ 300px 이하
+  @media (max-width: 300px) {
+    .logo {
+      display: none;
+    }
+
+    .header__inner {
+      justify-content: center;
+      padding: 0;
+    }
+  }
 }
 
 .marquee__wrap {
@@ -96,7 +142,7 @@
   position: relative;
   border-top: 1px solid $white-color;
   border-bottom: 1px solid $white-color;
-  z-index: 3; 
+  z-index: 3;
 }
 
 .marquee__track {
@@ -104,6 +150,6 @@
   white-space: nowrap;
   will-change: transform;
   position: relative;
-  left: auto; 
-  top: auto;  
+  left: auto;
+  top: auto;
 }
