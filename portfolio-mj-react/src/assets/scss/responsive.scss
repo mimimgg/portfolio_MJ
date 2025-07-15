@@ -1,46 +1,58 @@
-// responsive.scss
-
 /* ============================================
-            768px 이하
+    ✅ 768px 이하 (Tablet 및 작은 데스크탑 대응)
 ============================================ */
 @media (max-width: 768px) {
-  .header__inner {
-    padding: 0 2rem;
-  }
-
-  .typing__text {
-    font-size: 8vw;
-  }
-
-  .sec__desc {
-    letter-spacing: 0.4rem;
-  }
-
-  .about__text {
-    font-size: 2.4vw;
-    letter-spacing: 0.1rem;
-  }
-
-  .portfolio__info {
-    p {
-      font-size: 1.4rem;
-      text-align: center;
-      width: 100%;
-      line-height: 1.5;
+  .header {
+    &__inner {
+      padding: 0 2rem;
     }
   }
-  .main__portfolio .portfolio__web .portfolio__info .portfolio__cat {
-    display: none;
+
+  .typing {
+    &__text {
+      font-size: 8vw;
+    }
+  }
+
+  .sec {
+    &__desc {
+      letter-spacing: 0.4rem;
+    }
+  }
+
+  .about {
+    &__text {
+      font-size: 2.4vw;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .portfolio {
+    &__info {
+
+      p {
+        font-size: 1.4rem;
+        text-align: center;
+        width: 100%;
+        line-height: 1.5;
+      }
+    }
+    .main__portfolio .portfolio__web .portfolio__info .portfolio__cat {
+      display: none;
+    }
   }
 }
 
 /* ============================================
-            480px 이하
+    ✅ 480px 이하 (Mobile 대응)
 ============================================ */
 @media (max-width: 480px) {
-  // Header
   .header {
     height: 60px;
+
+    &__inner {
+      padding: 0 2rem;
+    }
   }
 
   .logo {
@@ -48,167 +60,172 @@
   }
 
   .gnb {
-    gap: calc(8 * 2px);
-  }
+    gap: 16px;
 
-  .gnb > li {
-    font-size: 1.2rem;
-  }
-
-  .header__inner {
-    padding: 0 2rem;
-  }
-
-  // Section Title & Desc
-  .main__box {
-    padding: 10rem 4rem 3rem 4rem;
-  }
-
-  .sec__desc {
-    letter-spacing: 0.2rem;
-  }
-
-  .title__box {
-    padding-bottom: 1rem;
-  }
-
-  .sec__title {
-    font-size: 7vw;
-  }
-
-  // About Section
-  .about__box {
-    flex-direction: column;
-    align-items: center;
-
-    > div {
-      width: 30vw;
+    > li {
+      font-size: 1.2rem;
     }
   }
 
-  .about__text {
-    font-size: 3.2vw;
-    letter-spacing: 0.2rem;
+  .main {
+    &__box {
+      padding: 10rem 4rem 3rem 4rem;
+    }
   }
 
-  .about__label {
-    font-size: 2.4vw;
-    left: -36%;
-    width: 180%;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+  .sec {
+    &__desc {
+      letter-spacing: 0.2rem;
+    }
+  }
 
-    // active 클래스 있을 때
-    .about__design &.active {
+  .title {
+    &__box {
+      padding-bottom: 1rem;
+    }
+
+    &__title {
+      font-size: 7vw;
+    }
+  }
+
+  .about {
+    &__box {
+      flex-direction: column;
+      align-items: center;
+
+      > div {
+        width: 30vw;
+      }
+    }
+
+    &__text {
+      font-size: 3.2vw;
+      letter-spacing: 0.2rem;
+    }
+
+    &__label {
+      font-size: 2.4vw;
+      left: -36%;
+      width: 180%;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    &__design.active &__label {
       opacity: 1;
       visibility: visible;
     }
   }
 
-  // Portfolio Section
-  .portfolio__web {
-    display: flex;
-    flex-direction: column-reverse;
-    height: auto;
-    background-color: #000;
-
-    .portfolio__thumbnail {
-      position: sticky;
-      top: 0;
-      height: 40vh;
-      width: 100%;
-
-      &:last-child {
-        position: static;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .portfolio__info {
-      flex: 0 0 50vh;
-      height: 60vh;
-      width: 100%;
-      padding: 3rem 2rem 0;
-      box-sizing: border-box;
+  .portfolio {
+    &__web {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-      justify-content: flex-start;
-      overflow-y: auto;
-      position: relative;
+      flex-direction: column-reverse;
+      height: auto;
+      background-color: #000;
 
-      .portfolio__title {
-        letter-spacing: normal;
-        font-size: 8vw;
-      }
-
-      p {
-        text-align: left;
-        font-size: 4vw;
-      }
-    }
-
-    .portfolio__view {
-      flex-direction: column;
-      font-size: 1.4rem;
-      gap: 1.5rem;
-      width: 100%;
-
-      a {
-        display: inline-block;
+      .portfolio__thumbnail {
+        position: sticky;
+        top: 0;
+        height: 40vh;
         width: 100%;
+
+        &:last-child {
+          position: static;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .portfolio__info {
+        flex: 0 0 50vh;
+        height: 60vh;
+        width: 100%;
+        padding: 3rem 2rem 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        justify-content: flex-start;
+        overflow-y: auto;
+        position: relative;
+
+        .portfolio__title {
+          letter-spacing: normal;
+          font-size: 8vw;
+        }
+
+        p {
+          text-align: left;
+          font-size: 4vw;
+        }
+      }
+
+      .portfolio__view {
+        flex-direction: column;
+        font-size: 1.4rem;
+        gap: 1.5rem;
+        width: 100%;
+
+        a {
+          display: inline-block;
+          width: 100%;
+        }
       }
     }
   }
 
-  // Footer
-  .footer__wrap {
-    padding: 3rem 2rem;
-  }
-
-  .footer__title {
-    font-size: 2.5rem;
-  }
-
-  .footer__description {
-    font-size: 1.4rem;
-  }
-
-  .footer__links {
-    width: 80%;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .footer__link-item {
-    padding: 2rem 2rem;
-    justify-content: space-between;
-
-    i {
-      font-size: 1.8rem;
+  .footer {
+    &__wrap {
+      padding: 3rem 2rem;
     }
 
-    span {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__description {
       font-size: 1.4rem;
+    }
+
+    &__links {
+      width: 80%;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &__link-item {
+      padding: 2rem 2rem;
+      justify-content: space-between;
+
+      i {
+        font-size: 1.8rem;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
     }
   }
 }
 
 /* ============================================
-            300px 이하
+    ✅ 300px 이하 (초소형 화면 대응)
 ============================================ */
 @media (max-width: 300px) {
   .logo {
     display: none;
   }
 
-  .header__inner {
-    justify-content: center;
-    padding: 0;
+  .header {
+    &__inner {
+      justify-content: center;
+      padding: 0;
+    }
   }
 }
