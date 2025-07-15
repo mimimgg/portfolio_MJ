@@ -12,6 +12,8 @@ function Portfolio() {
   useEffect(() => {
     const cards = document.querySelectorAll('.portfolio__web');
   
+    if (window.innerWidth < 768) return;
+
     cards.forEach((card) => {
       const title = card.querySelector('.portfolio__title');
       const categories = card.querySelectorAll('.portfolio__cat li');
@@ -21,12 +23,11 @@ function Portfolio() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card,
-          start: 'top 80%', // ✅ 너무 늦지 않게 트리거
-          once: true, // ✅ 한 번만 실행되게 해서 "걸리는" 문제 방지
+          start: 'top 80%',
+          once: true,
         },
       });
   
-      // ✅ fromTo로 확실하게 초기 상태 지정
       tl.fromTo(title, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4 });
       tl.fromTo(categories, { opacity: 0, y: 20 }, { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 });
       tl.fromTo(desc, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5 });
