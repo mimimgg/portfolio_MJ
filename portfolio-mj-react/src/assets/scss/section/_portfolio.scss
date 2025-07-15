@@ -62,7 +62,7 @@
           }
 
           &.point-design {
-            background: #ff5580;
+            background: $secondary-color;
             border: none;
             color: $white-color;
             font-weight: bold;
@@ -80,7 +80,7 @@
       }
 
       .design {
-        color: #ff5580;
+        color: $secondary-color;
       }
 
       .portfolio__view {

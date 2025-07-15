@@ -1,7 +1,12 @@
+// reponsive.scss
+
 /* ============================================
     ✅ 768px 이하 (Tablet 및 작은 데스크탑 대응)
 ============================================ */
 @media (max-width: 768px) {
+  .main__portfolio .portfolio__web .portfolio__info .portfolio__cat {
+    display: none;
+  }
   .header {
     &__inner {
       padding: 0 2rem;
@@ -29,16 +34,12 @@
 
   .portfolio {
     &__info {
-
       p {
         font-size: 1.4rem;
         text-align: center;
         width: 100%;
         line-height: 1.5;
       }
-    }
-    .main__portfolio .portfolio__web .portfolio__info .portfolio__cat {
-      display: none;
     }
   }
 }
