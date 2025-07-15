@@ -65,6 +65,9 @@
 
     // ✅ 300px 이하
     @media (max-width: 300px) {
+      .logo {
+        display: none;
+      }
       justify-content: center;
       padding: 0;
     }
