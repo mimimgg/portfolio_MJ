@@ -4,44 +4,33 @@
             768px 이하
 ============================================ */
 @media (max-width: 768px) {
-  // Header
   .header__inner {
     padding: 0 2rem;
   }
 
-  // Typing Text
   .typing__text {
     font-size: 8vw;
   }
 
-  // Section Description
   .sec__desc {
     letter-spacing: 0.4rem;
   }
 
-  // About Section
   .about__text {
     font-size: 2.4vw;
     letter-spacing: 0.1rem;
   }
 
-  // Portfolio Section
   .portfolio__info {
-    .portfolio__cat {
-      display: none;;
-      white-space: nowrap;
-      gap: 0.8rem;
-      font-size: 1rem;
-      width: 100%;
-      justify-content: center;
-    }
-
     p {
       font-size: 1.4rem;
       text-align: center;
       width: 100%;
       line-height: 1.5;
     }
+  }
+  .main__portfolio .portfolio__web .portfolio__info .portfolio__cat {
+    display: none;
   }
 }
 
