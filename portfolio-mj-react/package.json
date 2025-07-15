@@ -1,7 +1,7 @@
 {
   "name": "portfolio-mj-react",
   "version": "0.1.0",
-  "homepage": "https://mimimgg.github.io/portfolio_MJ/portfolio-mj-react",
+  "homepage": "https://mimimgg.github.io/portfolio_MJ",
   "private": true,
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
